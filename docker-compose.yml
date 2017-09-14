@@ -1,0 +1,83 @@
+version: '2'
+
+services:
+  dump_table:
+    build: .
+    image: beta-docker-registry.andrermartins/andre/xgh:latest
+    environment: 
+      action: dump_table
+      ambiente: DESENVOLVIMENTO
+      application_name: risco-process-daemon
+      config_file: asset
+      postgres_host: XX.X.XX.XX
+      postgres_port: YYYY
+      postgres_database: ABCDEF
+      postgres_user: ABCDEF
+      postgres_password: PASS
+      postgres_host_fundos: xpto.com.br
+      postgres_port_fundos: AAAA
+      postgres_database_fundos: Fundos
+      postgres_user_fundos: opfund
+      postgres_password_fundos: PASS2
+      mq_adress: xpto.com.br
+      mq_port: AAAA
+      mq_user: ABCDEF
+      mq_password: PASS3
+      mq_adress_2: xpto.com.br
+      mq_port_2: AAAA
+      mq_user_2: ABCDEF
+      mq_password_2: PASS3
+
+  update_flex_version:
+    build: .
+    image: beta-docker-registry.andrermartins/andre/xgh:latest
+    environment: 
+      action: update_flex_version
+      ambiente: DESENVOLVIMENTO
+      application_name: risco-process-daemon
+      config_file: asset
+      postgres_host: XX.X.XX.XX
+      postgres_port: YYYY
+      postgres_database: ABCDEF
+      postgres_user: ABCDEF
+      postgres_password: PASS
+      postgres_host_fundos: xpto.com.br
+      postgres_port_fundos: AAAA
+      postgres_database_fundos: Fundos
+      postgres_user_fundos: opfund
+      postgres_password_fundos: PASS2
+      mq_adress: xpto.com.br
+      mq_port: AAAA
+      mq_user: ABCDEF
+      mq_password: PASS3
+      mq_adress_2: xpto.com.br
+      mq_port_2: AAAA
+      mq_user_2: ABCDEF
+      mq_password_2: PASS3
+
+  show_error:
+    build: .
+    image: beta-docker-registry.andrermartins/andre/xgh:latest
+    environment: 
+      action: show_error
+      ambiente: DESENVOLVIMENTO
+      application_name: risco-process-daemon
+      config_file: asset
+      postgres_host: XX.X.XX.XX
+      postgres_port: YYYY
+      postgres_database: ABCDEF
+      postgres_user: ABCDEF
+      postgres_password: PASS
+      postgres_host_fundos: xpto.com.br
+      postgres_port_fundos: AAAA
+      postgres_database_fundos: Fundos
+      postgres_user_fundos: opfund
+      postgres_password_fundos: PASS2
+      mq_adress: xpto.com.br
+      mq_port: AAAA
+      mq_user: ABCDEF
+      mq_password: PASS3
+      mq_adress_2: xpto.com.br
+      mq_port_2: AAAA
+      mq_user_2: ABCDEF
+      mq_password_2: PASS3
