@@ -13,7 +13,7 @@ def dump_table(table_name, conn):
     for desc in description:
         columns += "||CASE WHEN "+desc.name+" IS NULL THEN 'NULL' ELSE ''''||"+desc.name+"::VARCHAR||'''' END ||','"
     columns = columns[0:len(columns)-3]
-    columns += "')'"
+    columns += "');'"
     print "SELECT "+columns+" FROM "+table_name
 
 def update_flex_version(vl_flex_version, hostname, conn):
